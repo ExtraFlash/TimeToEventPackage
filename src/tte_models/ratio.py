@@ -6,7 +6,7 @@ import pandas as pd
 from torch.utils.data import DataLoader
 from typing import Union
 
-from utils.dataset import MyDataset
+from tte_utils.dataset import MyDataset
 
 
 class RATIO:

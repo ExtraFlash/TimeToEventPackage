@@ -1,5 +1,5 @@
-from models.ratio import RATIO
-from models.my_model import MyModel
+from tte_models.ratio import RATIO
+from tte_models.my_model import MyModel
 
 RATIO_NAME = "RATIO"
 MyModel_NAME = "MyModel"

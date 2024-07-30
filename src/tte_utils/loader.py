@@ -9,7 +9,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.utils import shuffle
 
-from utils.dataset import MyDataset
+from src.tte_utils.dataset import MyDataset
 
 
 def load_dataset(dataset_name: str):

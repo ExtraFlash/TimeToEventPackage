@@ -1,7 +1,7 @@
 from lifelines.utils import concordance_index
 import torch
 
-from utils.dataset import MyDataset
+from src.tte_utils.dataset import MyDataset
 
 
 def calculate_ci(model, val_dataset) -> float:

@@ -3,9 +3,8 @@ import torch.nn as nn
 import torch
 import torch.nn.functional as F
 import pandas as pd
-from torch.utils.data import TensorDataset, DataLoader
+from torch.utils.data import DataLoader
 from typing import Union
-import os
 
 from utils.dataset import MyDataset
 

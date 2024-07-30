@@ -1,7 +1,3 @@
-import os.path
-import pickle
-import json
-
 from models.ratio import RATIO
 from models.my_model import MyModel
 

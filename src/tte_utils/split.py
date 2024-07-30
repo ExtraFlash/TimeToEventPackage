@@ -1,7 +1,7 @@
 from sklearn.utils import shuffle
 from sklearn.model_selection import StratifiedShuffleSplit
 import pandas as pd
-from utils.dataset import MyDataset
+from src.tte_utils.dataset import MyDataset
 
 
 def train_val_test_split(df: pd.DataFrame):

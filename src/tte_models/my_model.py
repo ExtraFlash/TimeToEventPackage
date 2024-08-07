@@ -18,15 +18,29 @@ class MyModel:
         self.network = TwoNetworks(input_size=input_size).to(self.device)
         self.optimizer = torch.optim.Adam(self.network.parameters(), lr=learning_rate)
 
-    def fit(self, x: pd.DataFrame, y: pd.DataFrame, n_epochs=1000, batch_size=32, show_progress=True):
+    def fit(self, x: pd.DataFrame, y: pd.DataFrame,
+            dataset: MyDataset = None,
+            n_epochs=1000, batch_size=32, show_progress=True):
+        """
+        Train the model
+        :param x: Dataframe
+        :param y: Dataframe
+        :param dataset: MyDataset: In case x and y are not provided
+        :param n_epochs:
+        :param batch_size:
+        :param show_progress:
+        :return:
+        """
+
         self.network.train()
 
         # TODO: load coefficients
 
-        x = torch.from_numpy(x.to_numpy())
-        y = torch.from_numpy(y.to_numpy())
+        if x is not None and y is not None:
+            x = torch.from_numpy(x.to_numpy())
+            y = torch.from_numpy(y.to_numpy())
+            dataset = MyDataset(x, y)
 
-        dataset = MyDataset(x, y)
         dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
         first_loss_history = []
